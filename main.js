@@ -21,6 +21,10 @@ app.get("/objects", (req, res) => {
   res.send(custom_boj);
 });
 
+app.post("/items", (req, res) => {
+  res.send("chagani post worked");
+});
+
 //localHost & PORT NUM
 app.listen(3000, () => {
   console.log("running on PORT 3000");
