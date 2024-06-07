@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 
+//.env file configure
+require("dotenv").config();
+
 //import it on top only
 const db = require("./db");
 
@@ -21,6 +24,7 @@ const menuRoutes = require("./routes/menuItemRoutes");
 app.use("/person", personRoutes);
 app.use("/menu", menuRoutes);
 
+const PORT = process.env.PORT || 3000;
 //localHost & PORT NUM
 app.listen(3000, () => {
   console.log("running on PORT 3000");
