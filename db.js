@@ -5,13 +5,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 //define mongoDB URL
-// const mongoURL_systemLocal =
-//   "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.6/hotels";
+const mongoURL_systemLocal =
+  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.6/hotels";
 
-const mongoURL = process.env.DB_URL;
+// const mongoURL = process.env.DB_URL;
 
 //set mongoDB Connection
-mongoose.connect(mongoURL, {
+mongoose.connect(mongoURL_systemLocal, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
